@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <img src="image/katana.jpg" alt="Product Image" />
+      <div class="card-content">
+        <h3>Katana</h3>
+        <p class="price">Price: $1999.99</p>
+        <button class="buyBtn">Купити</button>
+      </div>
+    </div>
+
+    <form class="purchaseForm" action="/buy_something" method="post">
+      <div>
+        <label for="userName">Вкажіть ваше ПІБ:</label>
+        <input type="text" id="userName" name="userName" required />
+      </div>
+      <div>
+        <label for="userName">Вкажіть ваш номер телефону:</label>
+        <input
+          type="text"
+          id="userNumber"
+          name="userNumber"
+          placeholder="+38 ()"
+          required
+        />
+      </div>
+      <div>
+        <label for="userName">Вкажіть ваш email:</label>
+        <input type="text" id="userEmail" name="userEmail" required />
+      </div>
+      <div>
+        <label for="userCity">Вкажіть ваше місто:</label>
+        <select id="userCity" name="userCity">
+          <option value="lviv">Львів</option>
+          <option value="kyiv">Київ</option>
+          <option value="ternopil">Тернопіль</option>
+          <option value="ivanoFrankivs">Івано-Франківськ</option>
+        </select>
+      </div>
+      <div>
+        <label for="postOffice">Вкажіть відділення Нової Пошти:</label>
+        <input type="text" id="postOffice" name="postOffice" required />
+      </div>
+      <div>
+        <label for="amount">Вкажіть кількість:</label>
+        <input type="number" id="amount" name="amount" />
+      </div>
+      <div>
+        <label for="paymentMethod">Оберіть метод оплати:</label>
+        <select id="paymentMethod" name="paymentMethod">
+          <option value="card">Банківська карта</option>
+          <option value="cash">Готівка</option>
+        </select>
+      </div>
+      <div>
+        <label for="bankCard">Вкажіть номер банківської картки:</label>
+        <input type="text" id="bankCard" name="bankCard" required />
+      </div>
+      <div>
+        <label for="comments">Місце для коментарів:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+      </div>
+      <div>
+        <button class="submitBtn" type="button">Перевірити замовлення</button>
+      </div>
+    </form>
+
+    <div class="orderInfo">
+      <p>Ваше замовлення:</p>
+      <br />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
